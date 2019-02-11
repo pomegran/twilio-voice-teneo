@@ -1,19 +1,30 @@
 {
-  "version": "0.0.1",
-  "description": "A basic example of using Teneo and Twilio voice",
-  "main": "server.js",
-  "engines": {
-    "node": ">=8.1.4",
-    "npm": ">=5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "Mark Jones",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "@artificialsolutions/tie-api-client": "^1.1.2",
-    "twilio": "^3.28.0"
-  }
+    "name": "twilio-voice-teneo",
+    "description": "A Teneo bot connector for the Twilio Voice.",
+    "keywords": [
+        "bot",
+        "Twilio",
+        "Teneo",
+        "Voice"
+    ],
+    "repository": "https://github.com/pomegran/twilio-voice-teneo/",
+    "env": {
+        "WEBHOOK_FOR_TWILIO": {
+            "description": "Webhook for Twilio Voice i.e. the server it will send messages to i.e. external address for server this application runs on",
+            "required":true
+        },
+        "PORT": {
+            "description": "Port this runs on.  Defaults to 1337",
+            "required":false
+        },        
+        "TENEO_ENGINE_URL": {
+            "description": "Please input your Teneo Engine URL. https://some.engine/instance/",
+            "required":true
+        },        
+        "FIRST_INPUT_FOR_TENEO": {
+            "description": "First input to send to Teneo when a call starts - empty if not entered",
+            "required":false
+        },
+
+    }
 }
