@@ -3,7 +3,6 @@ const chalk = require('chalk');
 const qs = require('querystring');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const TIE = require('@artificialsolutions/tie-api-client');
-
 const {
   TENEO_ENGINE_URL,
   WEBHOOK_FOR_TWILIO,
@@ -47,11 +46,11 @@ var server = http.createServer((req, res) => {
 		var post = qs.parse(body);
 		var textToSend = '';
 
-		if (post.CallStatus == 'ringing') { 								// If first input of call, send default input to Teneo (blank here)
+		if (post.CallStatus == 'ringing') { // If first input of call, send default input to Teneo (blank here)
 			textToSend = firstInput;
-		} else if (post.CallStatus = 'in-progress' && post.SpeechResult) { 	// Spoken responses
+		} else if (post.CallStatus = 'in-progress' && post.SpeechResult) { // Spoken responses
 			textToSend = post.SpeechResult;
-		} else { 															// Unrecognized, send blank
+		} else { // Unrecognized, send blank
 			textToSend = '';
 		}
 
