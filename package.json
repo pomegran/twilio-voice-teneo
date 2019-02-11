@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "description": "A basic example of using Teneo and Twilio voice",
+  "main": "server.js",
+  "engines": {
+    "node": ">=8.1.4",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mark Jones",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@artificialsolutions/tie-api-client": "^1.1.2",
+    "twilio": "^3.28.0"
+  }
+}
