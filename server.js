@@ -16,7 +16,7 @@ const firstInput = process.env.FIRST_INPUT_FOR_TENEO || '';
  * VERY BASIC SESSION HANDLER
  ***/
 
-const keyPair = new Map();
+var keyPair = new Map();
 
 function getSession (userId) {
 	var sessionId = '';
