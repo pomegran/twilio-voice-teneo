@@ -24,7 +24,6 @@
         "FIRST_INPUT_FOR_TENEO": {
             "description": "First input to send to Teneo when a call starts - empty if not entered",
             "required":false
-        },
-
+        }
     }
 }
