@@ -55,9 +55,10 @@ var server = http.createServer((req, res) => {
 		}
 
 		var callId = post.CallSid;
+		var phoneNumber = post.Caller;
 		var teneoSessionId = getSession(callId);
 
-		teneoApi.sendInput(teneoSessionId, {text: textToSend}).then(teneoResponse => {
+		teneoApi.sendInput(teneoSessionId, {text: textToSend, channel: 'twilio', phoneNumber: phoneNumber}).then(teneoResponse => {
 
 			setSession(callId, teneoResponse.sessionId);
 
