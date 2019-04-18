@@ -17,6 +17,10 @@ const firstInput = FIRST_INPUT_FOR_TENEO || '';
 const language_STT = LANGUAGE_STT || 'en-GB';
 const language_TTS = LANGUAGE_TTS || 'en-GB';
 
+console.log (language_STT);
+console.log (language_TTS);
+
+
 /***
  * VERY BASIC SESSION HANDLER
  ***/
