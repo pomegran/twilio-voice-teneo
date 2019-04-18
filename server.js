@@ -15,7 +15,7 @@ const port = PORT || 1337;
 const teneoApi = TIE.init(TENEO_ENGINE_URL);
 const firstInput = FIRST_INPUT_FOR_TENEO || '';
 const language_STT = LANGUAGE_STT || 'en-GB';
-const language_TTS = LANGUAGE_TTS || 'en-GB';
+const language_TTS = LANGUAGE_TTS || 'Polly.Emma';
 
 console.log (language_STT);
 console.log (language_TTS);
@@ -90,13 +90,10 @@ var server = http.createServer((req, res) => {
 					input: 'speech',
 					speechTimeout: 1
 				});
-				/*
 				response.say({
-				    voice: 'woman',
-				    language: language_TTS
+				    voice: language_TTS
 				}, teneoResponse.output.text);
-				*/
-				response.say(teneoResponse.output.text);
+				/* response.say(teneoResponse.output.text); */
 			}
 
 			console.log(chalk.yellow('Caller ID: '+callId));
