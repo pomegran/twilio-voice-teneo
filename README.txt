@@ -28,16 +28,8 @@ https://heroku.com/deploy?template=https://github.com/pomegran/twilio-voice-tene
 
 5. Click "Deploy App"
 
-
-
-
-
-
-
-
-
-
 You should now be able to call the number and speak to your bot.
+
 
 Other notes:
 
