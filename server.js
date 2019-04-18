@@ -93,7 +93,6 @@ var server = http.createServer((req, res) => {
 				response.say({
 				    voice: language_TTS
 				}, teneoResponse.output.text);
-				/* response.say(teneoResponse.output.text); */
 			}
 
 			console.log(chalk.yellow('Caller ID: '+callId));
