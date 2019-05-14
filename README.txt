@@ -25,6 +25,8 @@ https://heroku.com/deploy?template=https://github.com/pomegran/twilio-voice-tene
    LANGUAGE_SST : Please enter your Twilio Language for voice recognition (STT).  Defaults to 'en-GB'.  List is here: https://www.twilio.com/docs/voice/twiml/gather#languagetags
    LANGUAGE_TTS : Please enter your Twilio Language for spoken voice (TTS) - will use Amazon Polly.  Defaults to 'Polly.Emma'.  List is here: https://www.twilio.com/docs/voice/twiml/say/text-speech#amazon-polly
    FIRST_INPUT_FOR_TENEO : First input to send to Teneo when a call starts.  Empty if not entered
+   ACCOUNT_SID: Twilio Account SID - only required if sending SMSs.  Found here: https://www.twilio.com/console
+   AUTH_TOKEN: Twilio Auth Token - only required if sending SMSs.  Found here: https://www.twilio.com/console
 
 5. Click "Deploy App"
 

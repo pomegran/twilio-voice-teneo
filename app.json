@@ -32,6 +32,15 @@
         "FIRST_INPUT_FOR_TENEO": {
             "description": "First input to send to Teneo when a call starts.  Empty if not entered",
             "required":false
-        }
+        },
+        "ACCOUNT_SID": {
+            "description": "Twilio Account SID - only required if sending SMSs.  Found here: https://www.twilio.com/console",
+            "required":false
+        },        
+        "AUTH_TOKEN": {
+            "description": "Twilio Auth Token - only required if sending SMSs.  Found here: https://www.twilio.com/console",
+            "required":false
+        }        
+        
     }
 }
