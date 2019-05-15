@@ -87,7 +87,7 @@ var server = http.createServer((req, res) => {
 				console.log ("SMS Sent from " + post.From + " to " + phoneNumber + " with the message " + teneoResponse.output.parameters.twilio_smsText);
 				const client = require('twilio')(accountSid, authToken);
 				client.messages
-					.create({from: post.Called, body: teneoResponse.output.parameters.twilio_smsText, to: phoneNumber});
+					.create({from: post.From, body: teneoResponse.output.parameters.twilio_smsText, to: phoneNumber});
 			}
 
 			if  (teneoResponse.output.parameters.twilio_endCall == 'true') { // If the output parameter 'twilio_endcall' exists, the call will be ended
