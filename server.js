@@ -103,8 +103,8 @@ var server = http.createServer((req, res) => {
 				});
 
 				var textToSay = teneoResponse.output.text;
-				if (teneoResponse.output.parameters.twilio_twilio_customOutput) // If the output parameter 'twilio_customOutput' exists, read this instead of output text
-					textToSay = teneoResponse.output.parameters.twilio_twilio_customOutput;
+				if (teneoResponse.output.parameters.twilio_customOutput) // If the output parameter 'twilio_customOutput' exists, read this instead of output text
+					textToSay = teneoResponse.output.parameters.twilio_customOutput;
 
 				response.say({
 				    voice: language_TTS
