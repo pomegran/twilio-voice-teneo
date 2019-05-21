@@ -22,7 +22,7 @@ https://heroku.com/deploy?template=https://github.com/pomegran/twilio-voice-tene
    Option config vars:
 
    PORT : Port this runs on.  Defaults to 1337
-   LANGUAGE_SST : Please enter your Twilio Language for voice recognition (STT).  Defaults to 'en-GB'.  List is here: https://www.twilio.com/docs/voice/twiml/gather#languagetags
+   LANGUAGE_STT : Please enter your Twilio Language for voice recognition (STT).  Defaults to 'en-GB'.  List is here: https://www.twilio.com/docs/voice/twiml/gather#languagetags
    LANGUAGE_TTS : Please enter your Twilio Language for spoken voice (TTS) - will use Amazon Polly.  Defaults to 'Polly.Emma'.  List is here: https://www.twilio.com/docs/voice/twiml/say/text-speech#amazon-polly
    FIRST_INPUT_FOR_TENEO : First input to send to Teneo when a call starts.  Empty if not entered
    ACCOUNT_SID: Twilio Account SID - only required if sending SMSs.  Found here: https://www.twilio.com/console
