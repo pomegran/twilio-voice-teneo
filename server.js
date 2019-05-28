@@ -99,7 +99,7 @@ var server = http.createServer((req, res) => {
 					hints: customVocabulary,
 					action: WEBHOOK_FOR_TWILIO,
 					input: 'speech',
-					speechTimeout: 'auto'
+					speechTimeout: '1'
 				});
 
 				var textToSay = teneoResponse.output.text;
