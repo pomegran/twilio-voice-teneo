@@ -21,7 +21,7 @@
             "description": "Please input your Teneo Engine URL. https://some.engine/instance/",
             "required":true
         }, 
-        "LANGUAGE_SST": {
+        "LANGUAGE_STT": {
             "description": "Please enter your Twilio Language for voice recognition (STT).  Defaults to 'en-GB'.  List is here: https://www.twilio.com/docs/voice/twiml/gather#languagetags",
             "required":false
         },        
