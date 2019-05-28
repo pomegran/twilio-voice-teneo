@@ -80,7 +80,7 @@ var server = http.createServer((req, res) => {
 
 			var customTimeout = 'auto';
 			if (teneoResponse.output.parameters.twilio_customTimeout) {
-				customVocabulary = teneoResponse.output.parameters.twilio_customTimeout;
+				customTimeout = teneoResponse.output.parameters.twilio_customTimeout;
 			}
 
 			var customVocabulary = ''; // If the output parameter 'twilio_customVocabulary' exists, it will be used for custom vocabulary understanding.  This should be a comma separated list of words to recognize
