@@ -78,6 +78,11 @@ var server = http.createServer((req, res) => {
 			const twiml = new VoiceResponse();
 			var response = null;
 
+			var customTimeout = 'auto';
+			if (teneoResponse.output.parameters.twilio_customTimeout) {
+				customVocabulary = teneoResponse.output.parameters.twilio_customTimeout;
+			}
+
 			var customVocabulary = ''; // If the output parameter 'twilio_customVocabulary' exists, it will be used for custom vocabulary understanding.  This should be a comma separated list of words to recognize
 			if (teneoResponse.output.parameters.twilio_customVocabulary) {
 				customVocabulary = teneoResponse.output.parameters.twilio_customVocabulary;
@@ -99,7 +104,7 @@ var server = http.createServer((req, res) => {
 					hints: customVocabulary,
 					action: WEBHOOK_FOR_TWILIO,
 					input: 'speech',
-					speechTimeout: '3'
+					speechTimeout: customTimeout
 				});
 
 				var textToSay = teneoResponse.output.text;
