@@ -103,7 +103,7 @@ var server = http.createServer((req, res) => {
 					language: language_STT,
 					hints: customVocabulary,
 					action: WEBHOOK_FOR_TWILIO,
-					input: 'speech',
+					input: 'dtmf speech',
 					speechTimeout: customTimeout
 				});
 
