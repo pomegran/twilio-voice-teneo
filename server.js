@@ -63,10 +63,13 @@ var server = http.createServer((req, res) => {
 
 		if (post.CallStatus == 'ringing') { // If first input of call, send default input to Teneo (blank here)
 			textToSend = firstInput;
+			console.log("First");
 		} else if (post.CallStatus = 'in-progress' && post.SpeechResult) { // Spoken responses
 			textToSend = post.SpeechResult;
+			console.log("Speech"+textToSend);
 		} else if (post.CallStatus = 'in-progress' && post.Digits) { // DTMF Input
 			textToSend = post.Digits;
+			console.log("DTMF"+textToSend);
 		} else { // Unrecognized, send blank
 			textToSend = '';
 		}
