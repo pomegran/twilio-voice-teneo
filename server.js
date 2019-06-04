@@ -65,6 +65,8 @@ var server = http.createServer((req, res) => {
 			textToSend = firstInput;
 		} else if (post.CallStatus = 'in-progress' && post.SpeechResult) { // Spoken responses
 			textToSend = post.SpeechResult;
+		} else if (post.CallStatus = 'in-progress' && post.Digits) { // DTMF Input
+			textToSend = post.Digits;
 		} else { // Unrecognized, send blank
 			textToSend = '';
 		}
