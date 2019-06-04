@@ -59,6 +59,8 @@ var server = http.createServer((req, res) => {
 		var post = qs.parse(body);
 		var textToSend = '';
 
+		console.log (post);
+
 		if (post.CallStatus == 'ringing') { // If first input of call, send default input to Teneo (blank here)
 			textToSend = firstInput;
 		} else if (post.CallStatus = 'in-progress' && post.SpeechResult) { // Spoken responses
