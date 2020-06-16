@@ -117,8 +117,8 @@ var server = http.createServer((req, res) => {
 					hints: customVocabulary,
 					action: WEBHOOK_FOR_TWILIO,
 					input: 'dtmf speech',
-					speechModel = speechModel,
-					enhanced = enhancedModel,
+					speechModel : speechModel,
+					enhanced : enhancedModel,
 					speechTimeout: customTimeout
 				});
 
