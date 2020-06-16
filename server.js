@@ -92,6 +92,15 @@ var server = http.createServer((req, res) => {
 				customVocabulary = teneoResponse.output.parameters.twilio_customVocabulary;
 			}
 
+			var enhancedModel = false; // If the output parameter 'twilio_enhancedModel' exists, Twilio's enhanced model will be used.
+			var speechModel = "default";
+			if (teneoResponse.output.parameters.twilio_enhancedModel) {
+				if (teneoResponse.output.parameters.twilio_enhancedModel == "true") {
+					enhancedModel = true;
+					speechModel = "phone_call";
+				}
+			}
+
 			if (teneoResponse.output.parameters.twilio_smsText) { // If the output parameter 'twilio_smsText' exists, send a text
 				console.log ("SMS Sent from " + post.Called + " to " + phoneNumber + " with the message " + teneoResponse.output.parameters.twilio_smsText);
 				const client = require('twilio')(accountSid, authToken);
@@ -108,6 +117,8 @@ var server = http.createServer((req, res) => {
 					hints: customVocabulary,
 					action: WEBHOOK_FOR_TWILIO,
 					input: 'dtmf speech',
+					speechModel = speechModel,
+					enhanced = enhancedModel,
 					speechTimeout: customTimeout
 				});
 
