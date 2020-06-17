@@ -44,7 +44,7 @@ function setSession (userId, sessionId) {
 }
 
 /***
- * LISTEN FOR INPUTS FROM TWILIO, SEND TO TENEO AND RESPOND
+ * LISTEN FOR INPUTS FROM TWILIO, SEND TO TENEO AND GET RESPONSE
  ***/
 
 var server = http.createServer((req, res) => {
